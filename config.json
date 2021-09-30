@@ -1,0 +1,14 @@
+{
+    "LOCAL": {
+      "API_URL": "https://github.com/HackerNews/API"
+    },
+    "DEV": {
+      "API_URL": "https://github.com/HackerNews/API"
+    },
+    "QA": {
+      "API_URL": "https://github.com/HackerNews/API"
+    },
+    "PROD": {
+      "API_URL": "https://github.com/HackerNews/API"
+    }
+  }
