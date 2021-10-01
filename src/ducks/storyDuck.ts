@@ -7,7 +7,7 @@ export interface IStory {
 	id: number;
 	kids: number[];
 	score: number | null;
-	time: number | null;
+	time: number | Date;
 	title: string;
 	type: string;
 	url: string;
