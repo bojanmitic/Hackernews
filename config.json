@@ -1,14 +1,14 @@
 {
     "LOCAL": {
-      "API_URL": "https://github.com/HackerNews/API"
+      "API_URL": "https://hacker-news.firebaseio.com/v0/"
     },
     "DEV": {
-      "API_URL": "https://github.com/HackerNews/API"
+      "API_URL": "https://hacker-news.firebaseio.com/v0/"
     },
     "QA": {
-      "API_URL": "https://github.com/HackerNews/API"
+      "API_URL": "https://hacker-news.firebaseio.com/v0/"
     },
     "PROD": {
-      "API_URL": "https://github.com/HackerNews/API"
+      "API_URL": "https://hacker-news.firebaseio.com/v0/"
     }
   }
