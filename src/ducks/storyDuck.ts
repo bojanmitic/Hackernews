@@ -1,4 +1,3 @@
-/* eslint-disable no-return-await */
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export interface IStory {
@@ -15,7 +14,7 @@ export interface IStory {
 
 interface IInitialState {
 	stories: IStory[];
-	status: string;
+	isLoading: boolean;
 }
 
 export const getStories = createAsyncThunk("stories/getStories", async () => {
@@ -34,7 +33,7 @@ export const getStories = createAsyncThunk("stories/getStories", async () => {
 
 const initialState: IInitialState = {
 	stories: [],
-	status: "",
+	isLoading: false,
 };
 
 const storiesSlice = createSlice({
@@ -43,14 +42,14 @@ const storiesSlice = createSlice({
 	reducers: {},
 	extraReducers: {
 		[getStories.pending.type]: (state, _) => {
-			state.status = "Loading";
+			state.isLoading = true;
 		},
 		[getStories.fulfilled.type]: (state, { payload }) => {
 			state.stories = payload;
-			state.status = "success";
+			state.isLoading = false;
 		},
 		[getStories.rejected.type]: (state, _) => {
-			state.status = "failed";
+			state.isLoading = false;
 		},
 	},
 });
